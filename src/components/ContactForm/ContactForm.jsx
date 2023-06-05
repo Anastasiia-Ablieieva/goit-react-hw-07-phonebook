@@ -14,7 +14,7 @@ export const ContactForm = () => {
         const contact = {
             id: nanoid(),
             name: event.currentTarget.elements.name.value,
-            number: event.currentTarget.elements.number.value,
+            phone: event.currentTarget.elements.phone.value,
         };
 
         const isExist = contacts.find(({ name }) => name.toLowerCase() === contact.name.toLowerCase());
@@ -43,7 +43,7 @@ export const ContactForm = () => {
         <input
             className={css.input}
             type="tel"
-            name="number"
+            name="phone"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             id={nanoid()}
